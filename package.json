@@ -10,8 +10,9 @@
     "bundle": "NODE_ENV=development webpack -w",
     "build": "NODE_ENV=production webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "wbuild" : "NODE_ENV=ghdeploy webpack", 
+    "predeploy": "npm run wbuild",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",

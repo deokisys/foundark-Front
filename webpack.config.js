@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config({//env가져오기
     path: path.resolve(//경로찾기
         process.cwd(),//현재경로 + 
-        process.env.NODE_ENV == "production" ? "env/.production.env" : "env/.development.env"//실제는 .env, 개발은 .env.dev사용
+        `env/.${process.env.NODE_ENV}.env`//환경변수 선택 node_env를 통해서
     ),
     });
 console.log(process.env.IP)
