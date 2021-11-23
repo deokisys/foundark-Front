@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/deokisys/foundark-Front/issues"
   },
-  "homepage": "https://github.com/deokisys/foundark-Front",
+  "homepage": "https://deokisys.github.io/foundark-Front",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
