@@ -9,7 +9,9 @@
     "pro": "NODE_ENV=production node app.js",
     "bundle": "NODE_ENV=development webpack -w",
     "build": "NODE_ENV=production webpack -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/deokisys/foundark-Front/issues"
   },
-  "homepage": "https://github.com/deokisys/foundark-Front#readme",
+  "homepage": "https://github.com/deokisys/foundark-Front",
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
@@ -28,6 +30,7 @@
     "@babel/preset-env": "^7.15.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "mini-css-extract-plugin": "^2.2.0",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.1.0",
