@@ -10,7 +10,7 @@ const StylexPlugin = require("@stylexjs/webpack-plugin");
 module.exports = {
   // enntry file
   // - sass가 존재할경우 entry: ['@babel/polyfill', './main.js', './main.scss'],
-  entry: ["./src/App.jsx", "@babel/polyfill", "./src/sass/main.scss"],
+  entry: ["./src/App.tsx", "@babel/polyfill", "./src/sass/main.scss"],
   // 컴파일 + 번들링된 js 파일이 저장될 경로와 이름 지정
   output: {
     path: path.resolve(__dirname, "dist"),

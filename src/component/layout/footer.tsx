@@ -1,3 +1,5 @@
+import React from "react";
+
 function Footer() {
   return <div className="footer">서준배 while0 프로젝트</div>;
 }

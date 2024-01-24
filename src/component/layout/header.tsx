@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import harbTitle from "../../assets/title2.svg";
@@ -8,7 +9,7 @@ function Header() {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const [src, setSrc] = useState("");
+  const [src, setSrc] = useState<string>(null);
 
   useEffect(() => {
     if (currentPath === "/" || currentPath === "/harbrel") {

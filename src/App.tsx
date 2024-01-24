@@ -1,10 +1,11 @@
+import React from "react";
 import ReactDom from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //redux
 import store from "./reducer/index.js";
 import { Provider } from "react-redux";
 //component
-import Layout from "./Layout.jsx";
+import Layout from "./Layout";
 import Harbrel from "./page/harbrel/index.jsx";
 import Ella from "./page/ella/index.jsx";
 import Cho from "./page/cho/index.jsx";
