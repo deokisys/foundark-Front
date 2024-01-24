@@ -1,8 +1,8 @@
 import ReactDom from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //redux
-import store from './reducer'
-import { Provider } from 'react-redux'
+import store from "./reducer/index.js";
+import { Provider } from "react-redux";
 //component
 import Layout from "./Layout.jsx";
 import Harbrel from "./page/harbrel/index.jsx";
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children:[
+    children: [
       {
         index: true,
         element: <Harbrel />,
@@ -29,10 +29,9 @@ const router = createBrowserRouter([
       {
         path: "/cho",
         element: <Cho />,
-      }
-    ]
+      },
+    ],
   },
-  
 ]);
 
 ReactDom.createRoot(document.getElementById("root")).render(

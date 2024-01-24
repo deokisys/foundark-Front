@@ -5,8 +5,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
-const StylexPlugin = require('@stylexjs/webpack-plugin');
-
+const StylexPlugin = require("@stylexjs/webpack-plugin");
 
 module.exports = {
   // enntry file
@@ -43,18 +42,18 @@ module.exports = {
       React: "react",
     }),
     new StylexPlugin({
-      filename: 'styles.[contenthash].css',
+      filename: "styles.[contenthash].css",
 
       // Use statically generated CSS files and not runtime injected CSS.
       // Even in development.
       runtimeInjection: false,
       // optional. default: 'x'
-      classNamePrefix: 'x',
+      classNamePrefix: "x",
       // Required for CSS variable support
       unstable_moduleResolution: {
         // type: 'commonJS' | 'haste'
         // default: 'commonJS'
-        type: 'commonJS',
+        type: "commonJS",
         // The absolute path to the root directory of your project
         rootDir: __dirname,
       },
@@ -63,7 +62,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(tsx|ts|js|jsx)$/,
         // include: [path.resolve(__dirname, "src/js")], //이거 추가하면 jsx인식을 못함
         exclude: /node_modules/,
         use: "babel-loader",
@@ -89,7 +88,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".jsx", ".js"],
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
   devtool: "source-map",
   // https://webpack.js.org/concepts/mode/#mode-development

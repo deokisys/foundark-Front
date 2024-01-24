@@ -1,7 +1,5 @@
-
-
 const config = {
-  presets: ["@babel/preset-react", "@babel/preset-env"],
+  presets: ["@babel/preset-react", "@babel/preset-typescript", "@babel/preset-env"],
   plugins: [
     [
       "@stylexjs/babel-plugin",
@@ -14,7 +12,7 @@ const config = {
         unstable_moduleResolution: {
           // type: 'commonJS' | 'haste'
           // default: 'commonJS'
-          type: 'commonJS',
+          type: "commonJS",
           // The absolute path to the root directory of your project
           rootDir: __dirname,
         },
